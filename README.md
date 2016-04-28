@@ -14,8 +14,8 @@ back. Here's a Github repository that does the same thing.
 Rather than tax Github's servers with Bender and Fry quotes, create a
 local database with the following:
 
-    curl -s https://raw.github.com/vsbuffalo/good-news-everyone/master/futurama.txt | \
-      awk '{print $0} END{print "total quotes: "NR > "/dev/stderr"}' > ~/.futurama
+curl -s https://raw.githubusercontent.com/vsbuffalo/good-news-everyone/master/futurama.txt |\ awk '{print $0} END{print "total quotes: "NR > "/dev/stderr"}' > ~/.futurama
+
 
 This creates `~/.futurama`, a text database of quotes. Then, just
 add the following to your `~/.zshrc` or `~/.profile`:
