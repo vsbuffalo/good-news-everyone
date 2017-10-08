@@ -10,11 +10,15 @@ stressful debugging problems or hectic workdays, so I wanted them
 back. Here's a Github repository that does the same thing.
 
 ## Installation
+### Automatic
 
+On Linux and OS X, with bash or zsh, you should be able to run the script `install.sh` that performs the manual instructions below.
+
+### Manual
 Rather than tax Github's servers with Bender and Fry quotes, create a
 local database with the following:
 
-curl -s https://raw.githubusercontent.com/vsbuffalo/good-news-everyone/master/futurama.txt |\ awk '{print $0} END{print "total quotes: "NR > "/dev/stderr"}' > ~/.futurama
+	curl -s https://raw.githubusercontent.com/vsbuffalo/good-news-everyone/master/futurama.txt |\ awk '{print $0} END{print "total quotes: "NR > "/dev/stderr"}' > ~/.futurama
 
 
 This creates `~/.futurama`, a text database of quotes. Then, just
